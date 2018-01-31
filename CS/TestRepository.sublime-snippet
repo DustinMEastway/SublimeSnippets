@@ -1,0 +1,186 @@
+<!-- (\s+)|(,)|(\w+) -->
+<snippet>
+	<content><![CDATA[
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using $1.Data.EntityModel;
+using $1.Data.Test.EntityFactories;
+using $1.DomainObjects;
+
+namespace $1.Data.Test
+{
+	// Author:	$2
+	// Date:	$3
+
+	[TestClass]
+	public class Test$4Repository
+	{
+		public Test$4Repository()
+		{
+			//
+			// TODO: Add constructor logic here
+			//
+		}
+
+		private TestContext testContextInstance;
+
+		/// <summary>
+		///Gets or sets the test context which provides
+		///information about and functionality for the current test run.
+		/// </summary>
+		public TestContext TestContext
+		{
+			get
+			{
+				return testContextInstance;
+			}
+			set
+			{
+				testContextInstance = value;
+			}
+		}
+
+		[TestMethod]
+		public void TestGetAll_$4()
+		{
+			// Arrange
+			$4Factory ef = new $4Factory("ga_$5");
+			ef.Create();
+			$1UnitOfWork uow = new  $1UnitOfWork();
+
+			// Act
+			List<$4DTO> results = uow.$4Repository.GetAllData().Where(x => x.CreatedBy.Equals(ef.Tag)).ToList(); // TODO: GetAllData() vs GetAll()
+
+			// Assert
+			Assert.AreEqual(ef.TestEntities.Count, results.Count);
+
+			// clean up
+			ef.Delete();
+		}
+
+		TestMethod]
+		public void TestGet_$4()
+		{
+			// Arrange
+			$4Factory ef = new $4Factory("g_$5");
+			ef.Create();
+			$1UnitOfWork uow = new $1UnitOfWork();
+
+			$4DTO test$4 = new $4DTO(){ $4Id = ef.First.$4Id };
+
+			// Act
+			Assert.AreEqual(ef.First.$4Id, result.$4Id);${7/((\w+)(\s*)(=)(\s*)([\w.'"]+))|(\s+)|(,)/(?1\n\t\t\tAssert.AreEqual\(ef.First.\2, result.\2\);)/g}
+
+			// clean up
+			ef.Delete();
+		}
+
+		[TestMethod]
+		public void TestInsert_$4()
+		{
+			// Arrange
+			$4Factory ef = new $4Factory("i_$5", false);
+			ef.Create();
+			$1UnitOfWork uow = new $1UnitOfWork();
+
+			$4DTO testEntity = new $4DTO()
+			{${7/(\w+)|(\s+)|([,;])/(?1\n\t\t\t\t\1 = ef.First.\1,)/g}
+				CreatedBy = ef.Tag,
+				CreatedOn = DateTime.Now,
+				UpdatedBy = ef.Tag,
+				UpdatedOn = DateTime.Now,
+			};
+
+			// Act
+			$4DTO result = uow.$4Repository.Insert(test$4, ef.Tag);
+			uow.Save();
+
+			// Assert
+			using ($1Entities context = new $1Entities())
+			{
+				$4 insertedEntity = context.$4.Where(x => x.$4Id == ef.First.$4Id).First();
+				Assert.AreNotEqual(0, inserted$4.$4Id);${7/(\w+)|(\s+)|([,;])/(?1\n\t\t\t\tAssert.Equal\(testEntity.\1, insertedEntity.\1\);)/g}
+			}
+
+			//clean up
+			ef.Delete();
+		}
+
+		[TestMethod]
+		public void TestUpdate_$4()
+		{
+			// Arrange
+			$4Factory ef = new $4Factory("u_$5");
+			ef.Create();
+
+			$4DTO testEntity = new EmployeeDTO()
+			{
+				$4ID = ef.First.$4Id,${7/(\w+)|(\s+)|([,;])/(?1\n\t\t\t\t\1 = ef.First.\1,)/g} //TODO: Alter vals of cols
+			}
+
+			// Act
+			TestCodeDTO result = uow.$4Repository.Update(testEntity, ef.Tag);
+			uow.Save();
+
+			// Assert
+			using ($1Entities context = new $1Entities())
+			{
+				$4 updatedEntity = context.$4s.Where(x => x.EmployeeId == ef.First.$4Id).First();
+Assert.AreEqual(result.$4Id, updatededEntity.$4Id);${7/(\w+)|(?:\s+)|(?:[,;])/(?1\n\t\t\t\tAssert.AreEqual\(testEntity.\1, updatedEntity.\1\);/g}
+				Assert.AreNotEqual(ef.First.CreatedBy, updatedEntity.CreatedBy);
+				Assert.AreNotEqual(ef.First.CreatedOn, updatedEntity.CreatedOn);
+				Assert.AreNotEqual(ef.First.UpdatedBy, updatedEntity.UpdatedBy);
+				Assert.AreNotEqual(ef.First.UpdatedOn, updatedEntity.UpdatedOn);
+			}
+
+			// clean up
+			ef.Delete();
+		}
+
+		[TestMethod]
+		public void TestDelete_$4()
+		{
+			// Arrange
+			$4Factory ef = new $4Factory("d_$5");
+			ef.Create();
+			$1UnitOfWork uow = new $1UnitOfWork();
+
+			$4DTO testEntity = new $4DTO()
+			{
+				$4Id = ef.First.$4Id
+			};
+
+			// Act
+			$4DTO result = uow.$4Repository.Delete(testEntity, ef.Tag);
+			uow.Save();
+
+			// Assert
+			using ($Entities context = new $1Entities())
+			{
+				$4 deletedEntity = context.$4s.Where(x => x.$4Id == ef.Fist.$4Id).FirstOrDefault();
+				Assert.IsNull(deletedEntity);
+			}
+
+			// clean up
+			ef.Delete();
+		}
+	}
+}
+
+
+${99:
+/* TestRepository Snippet Data:
+\$1(Project):		${1:ORS}
+\$2(Developer):		${2:EastwayD}
+\$3(Date):			${3:08/23/2016}
+\$4(Entity):		${4:${TM_FILENAME/^(Test)(.*)(Repository.cs)$|(.+)/(?2\2)/g}}
+\$5(Tag):		${5:${4/([A-Z])|([^[A-Z])/(?1\l\1)/g}}
+\$6(FKs):			${6}
+\$7(Cols=Vals):		${7}
+*/
+}
+]]></content>
+	<tabTrigger>TestRepository</tabTrigger>
+	<scope>source.cs</scope>
+</snippet>

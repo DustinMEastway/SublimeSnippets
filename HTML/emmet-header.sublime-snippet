@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+$1header.navbar.navbar-default.navbar-fixed-top>nav.hidden-xs>ul.nav.navbar-nav>li>a[role=button].navbar-brand^+(li.dropdown[uib-dropdown]>a[role=button uib-dropdown-toggle].dropdown-toggle>i[aria-hidden=true].fa.fa-caret-down^+ul.dropdown-menu>li>a)*${2:3}^^^div.header-placeholder$0
+]]></content>
+	<tabTrigger>emmetHeader</tabTrigger>
+	<scope>text.html</scope>
+</snippet>

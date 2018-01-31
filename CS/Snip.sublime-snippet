@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+$4 updatedEntity = context.$4s.Where(x => x.EmployeeId == ef.First.$4Id).First();
+Assert.AreEqual(result.$4Id, updatededEntity.$4Id);${7/(\w+)|(?:\s+)|(?:[,;])/(?1\n\t\t\t\tAssert.AreEqual\(testEntity.\1, updatedEntity.\1\);/g}
+
+/*
+${7:Active,Email,FirstName,LastName,LoginName,Phone}
+*/
+]]></content>
+	<tabTrigger>snipTest</tabTrigger>
+	<scope>source.cs</scope>
+</snippet>

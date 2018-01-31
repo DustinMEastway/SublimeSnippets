@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[
+<snippet>
+	<content><![CDATA[
+$0
+\${99: $1 Snippet Data:
+${4/\s*(\d+)\s*:\s*((?:\w|\s)+)\s*[,;]?/\\\$$1\($2\):\t\t\$$1\n/g}}
+]]$NA></content>
+	<tabTrigger>$1</tabTrigger>
+	<scope>$2</scope>
+	<description>$3</description>
+</snippet>
+
+${99:
+<!-- Snippet Snippet Data:
+\$1(Trigger):		${1:${TM_FILENAME/(.*)\.sublime-snippet/\1/}}
+\$2(Scope):			${2:eg: text.html, source.js, source.less, source.cs, source.c++}
+\$3(Desc):		${3:FileType: Desc}
+\$4(Params):			${4:1:tab 1 name, 2:tab2Name}
+-->
+}
+]]></content>
+	<tabTrigger>snippet</tabTrigger>
+	<scope>text.xml</scope>
+	<description>XML: Snippet Creator</description>
+</snippet>

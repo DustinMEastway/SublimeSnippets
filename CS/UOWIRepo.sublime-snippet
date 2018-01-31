@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+private I${1:Entity}Repository _$1Repository = null;
+public virtual I$1Repository $1Repository
+{
+	get
+	{
+		if (this._$1Repository == null)
+		{
+			this._$1Repository = new $1Repository(this.Context);
+		}
+
+		return this._$1Repository;
+	}
+}
+]]></content>
+	<tabTrigger>UOWIRepo</tabTrigger>
+	<scope>source.cs</scope>
+</snippet>

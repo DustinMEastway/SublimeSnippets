@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+-moz-transition-duration: $1s;
+-o-transition-duration: $1s;
+-webkit-transition-duration: $1s;
+transition-duration: $1s;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>transition</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.less</scope>
+	<description>CSS Snip: transition</description>
+</snippet>

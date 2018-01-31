@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+${1:recordToPopulate}.${2:Column} = ${3:Test$2};
+$0
+]]>
+</content>
+	<tabTrigger>TestRecord</tabTrigger>
+	<scope>source.cs</scope>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+[$1_Id] INT ${3:NOT} NULL,
+$0
+CONSTRAINT [FK_${2:curTbl}_${1:fkTbl}] FOREIGN KEY ([$1_Id]) REFERENCES [$1]([$1_Id]),
+]]></content>
+	<tabTrigger>fkCol</tabTrigger>
+	<scope>source.sql</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+${1:recordToPopulate}.${2:FKName} = this.$2Factory.TestEntities[${3:iterationNumber}];
+$1.$2Id = this.$2Factory.TestEntities[$3].$2Id;
+$0
+]]>
+</content>
+	<tabTrigger>TestFKRecord</tabTrigger>
+	<scope>source.cs</scope>
+</snippet>

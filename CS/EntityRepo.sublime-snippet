@@ -1,0 +1,34 @@
+<snippet>
+	<content><![CDATA[
+using System.Data.Entity;
+using System.Linq;
+using CustomerService.Data.Common;
+using ORS.Data.EntityModels;
+using ORS.Data.Repositories.Interfaces;
+using ORS.DomainObjects;
+
+namespace ORS.Data.Repositories
+{
+	// Created by ${1:EastwayD} at ${2:8/18/2016}
+	// Template version: 1.0
+
+	public class ${3:${TM_FILENAME/^(.*)(Repository.cs)$/(?1\1)/g}}Repository : EntityFrameworkRepositoryBase<$3DTO, $3>, I$3Repository
+	{
+		#region Constructors
+
+		/// <summary>
+		/// A DbContext injectible constructor.  An Entity Framework Repository will always be passed the DbContext to use.
+		/// </summary>
+		/// <param name="context">A DbContext that can be used to access Form records from an Entity Framework datastore.</param>
+		public $3Repository(DbContext context)
+			: base(context)
+		{
+		}
+
+		#endregion Constructors
+	}
+}
+]]> </content>
+	<tabTrigger>EntityRepo</tabTrigger>
+	<scope>source.cs</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+[${1:ColName}] DATETIME ${2:NOT} NULL,
+$0
+]]></content>
+	<tabTrigger>dateTimeCol</tabTrigger>
+	<scope>source.sql</scope>
+</snippet>

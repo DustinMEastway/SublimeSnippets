@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+<?php
+require __DIR__ . "/../../vendor/autoload.php";
+
+/** @file
+ * @brief Unit tests for $1 class
+ * @cond 
+ */
+class $1Test extends \PHPUnit_Framework_TestCase
+{$0
+}
+
+/// @endcond
+${99:/* TestClass Snippet Data:
+\$1(Class):		${1:${TM_FILENAME/^(.*)(Test\.php)/$1/}}
+*/
+}?>
+
+]]></content>
+	<tabTrigger>TestClass</tabTrigger>
+	<scope>embedding.php</scope>
+	<description>PHP: Class Testing Class</description>
+</snippet>

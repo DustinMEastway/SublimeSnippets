@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+[${1:ColName}] INT NOT NULL PRIMARY KEY,
+$0
+]]></content>
+	<tabTrigger>primaryKey</tabTrigger>
+	<scope>source.sql</scope>
+</snippet>

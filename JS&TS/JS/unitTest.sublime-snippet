@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+it("should ${1:do something}", function(){
+	$0
+});
+]]></content>
+	<tabTrigger>unitTest</tabTrigger>
+	<scope>source.js</scope>
+	<description>JS Snip: Sets up a unit test</description>
+</snippet>

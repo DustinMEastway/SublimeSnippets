@@ -1,0 +1,30 @@
+<snippet>
+	<content><![CDATA[
+e!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<base href="/">
+	<title>${1:Site Title}</title>
+	<!-- App -->
+	${3:<link rel="stylesheet" type="text/css" href="${2:http://localhost/Style/App/site.css}">}
+	${5:<link rel="stylesheet" type="text/css" href="${4:Style/App/app.css}">}
+</head>
+<body>$0
+	<header>
+	</header>
+
+	<div class="content">
+	</div>
+
+	<footer>
+	</footer>
+
+	<span id="script-holder">
+	</span>
+</body>
+</html>
+]]></content>
+	<tabTrigger>html</tabTrigger>
+	<scope>text.html</scope>
+</snippet>

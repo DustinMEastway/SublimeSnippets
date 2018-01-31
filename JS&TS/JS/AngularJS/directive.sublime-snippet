@@ -1,0 +1,23 @@
+
+<snippet>
+	<content><![CDATA[
+${1:angularApp}.directive("${2:myDir}", [${3/^(.)|(,\s*)|(\w)$/(?1"\u$1:)(?2", "\u)(?3$3:", \u)/g}function($3){
+	return {
+		${5/(^$)|(.)/(?1\/\/\u)/g}controller: [${4/^(.)|(,\s*)|(\w)$/(?1"\u$1:)(?2", "\u)(?3$3:", \u)/g}function(${4:\$scope}){${5:}}],
+		${6/(^$)|(.)/(?1\/\/\u)/g}controllerAs: "${6:}",
+		${7/(^$)|(.)/(?1\/\/\u)/g}link: ${7:},
+		${8/(^$)|(.)/(?1\/\/\u)/g}require: "${8:}",
+		${9/(^$)|(.)/(?1\/\/\u)/g}replace: ${9:},
+		${10/(^$)|(.)/(?1\/\/\u)/g}restrict: '${10:}',
+		${11/(^$)|(.)/(?1\/\/\u)/g}scope: {${11:}},
+		${12/(^$)|(.)/(?1\/\/\u)/g}template: ${12:},
+		${13/(^$)|(.)/(?1\/\/\u)/g}templateUrl: "${13:}",
+		${14/(^$)|(.)/(?1\/\/\u)/g}transclude: ${14:}
+	};
+	${7/(^$)|(.*)/(?1\/\/\u)/g}function $7(${15:scope}${16/(^$)|(\s|.)*/(?2, \u)/g}${16:elem}${17/(^$)|(\s|.)*/(?2, \u)/g}${17:attr}${18/(^$)|(\s|.)*/(?2, \u)/g}${18:ctrls}){$0}
+}]);
+]]></content>
+	<tabTrigger>Directive</tabTrigger>
+	<scope>source.js</scope>
+	<description>JS Snip: AngularJS directive</description>
+</snippet>

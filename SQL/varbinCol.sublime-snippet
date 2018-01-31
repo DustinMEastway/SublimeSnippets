@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+[${1:ColName}] VARBINARY(${2:50}) ${3:NOT} NULL,
+$0
+]]></content>
+	<tabTrigger>varbinaryCol</tabTrigger>
+	<scope>source.sql</scope>
+</snippet>

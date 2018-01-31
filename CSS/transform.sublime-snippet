@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+-moz-transform: rotate($1deg);
+-ms-transform: rotate($1deg);
+-o-transform: rotate($1deg);
+-webkit-transform: rotate($1deg);
+transform: rotate($1deg);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>transform</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.less</scope>
+	<description>CSS Snip: transform</description>
+</snippet>

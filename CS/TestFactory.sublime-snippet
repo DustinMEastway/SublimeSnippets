@@ -1,0 +1,77 @@
+<snippet>
+	<content><![CDATA[
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using $1.Data.EntityModels;
+using $1.DomainObjects;
+${99:
+/* Snippet Data:
+\$1(ProjectName):			${1:ORS}
+\$2(TableName):				${2:${TM_FILENAME/^(.*)(Factory.cs)/(?1\1)/g}}
+\$3(Developer):				${3:EastwayD}
+\$4(Date):					${4:08/18/2016}
+\$5(Record):					${5:recordToPopulate}
+\$6(iteration#):				${6:iterationNumber}
+\$7(FKs):					[ ${7:FKTbl} ]
+\$8(Cols):					[ ${8:Col1=Val1; Col2=Val2} ]
+*/
+}
+namespace $1.Data.Test.EntityFactories
+{
+	// Created By: $3
+	// Created On: $4
+
+	internal class $2Factory : FactoryBase<$2>
+	{
+		#region Properties${7/($)|(\s*,?\s*)(\w*)(\s*)/(?3\n\t\tpublic \3Factory \3Factory { get; set; })/g}
+		#endregion Properties
+
+		#region Constructors
+
+		public $2Factory() : base() { }
+
+		public $2Factory(string tag, bool persist = true) : base(tag, persist) { }
+
+		#endregion Constructors
+
+		#region Methods
+
+		protected override System.Linq.Expressions.Expression<Func<$2, bool>> IdentifyTestRecordsLambda
+		{
+			get { return (x => x.CreatedBy == this.Tag); }
+		}
+
+		protected override void PopulateAdditionalAttributes()
+		{
+			//// TODO: Populate attributes that capture values from related factories here
+		}
+
+		protected override void PopulateRelatedFactories()
+		{
+			// TODO: Add related Factories to the this.RelatedFactories property for tables that this
+			// current Factory depends on.${7/($)|(\s*,?\s*)(\w*)(\s*)/(?3\n\t\t\tthis.\3Factory = new \3Factory\(this.Tag\);\n\t\t\tthis.RelatedFactories.Add\(this.\3Factory\);)/g}
+		}
+
+		protected override void PopulateTestRecord($2 $5, int $6)
+		{
+			// TODO: Populate the test record that will be Inserted into the database.  Be sure to incorporate
+			// the this.Tag property value in one of the $5 string properties
+
+			//Foreign Keys${7/($)|(\s*,?\s*)(\w*)(\s*)/(?3\n\t\t\trecordToPopulate.\3 = this.\3Factory.TestEntities[iterationNumber];\n\t\t\trecordToPopulate.\3Id = this.\3Factory.TestEntities[iterationNumber].\3Id;)/g}
+
+			//Standard Columns$0
+			$5.CreatedBy = this.Tag;
+			$5.CreatedOn = DateTime.Now;
+			$5.UpdatedBy = this.Tag;
+			$5.UpdatedOn = $5.CreatedOn;
+		}
+
+		#endregion Methods
+	}
+}
+]]>
+</content>
+	<tabTrigger>TestFactory</tabTrigger>
+	<scope>source.cs</scope>
+</snippet>

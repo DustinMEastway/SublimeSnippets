@@ -1,0 +1,19 @@
+
+<snippet>
+	<content><![CDATA[
+${3:angular.module("${1:modName}"${2/(^$)|(^.*)/(?2, [)/g}${2:dep..}${2/(^$)|(^.*)/(?2])/g})}
+.controller("${4:Ctrl}", [${5/^(.)|(,\s*)|(\w)$/(?1"\u$1:)(?2", "\u)(?3$3:", \u)/g}function($5){
+	//Variables
+	$6
+
+	//Init
+	$7
+
+	//Functions
+	$0
+}]);
+]]></content>
+	<tabTrigger>Controller</tabTrigger>
+	<scope>source.js</scope>
+	<description>JS Snip: AngularJS controller</description>
+</snippet>

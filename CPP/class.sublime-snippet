@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[
+class ${1:${TM_FILENAME/(.+)\..+/$1/}}{
+protected:
+	// Data Members$0
+public:
+	// Constructors, Destructors, Copies & Operators
+	// default constructor
+	$1();
+	// copy constructor
+	$1(const $1& obj);
+	// destructor
+	virtual ~$1();
+
+	// assignment operator
+	$1& operator=(const $1& obj){
+		if(this != &obj){ delete this; this = new $1(obj); } return *this;
+	}
+	// Gets & Sets
+	// Functions
+};
+
+]]></content>
+	<tabTrigger>class</tabTrigger>
+	<scope>source.c++</scope>
+</snippet>

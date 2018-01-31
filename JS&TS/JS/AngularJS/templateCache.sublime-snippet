@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+angular.module("$1", []).run(["\$templateCache", function (\$templateCache) {
+    \$templateCache.put("$1", [
+$0
+    ].join(' '));
+}]);
+${99:/* templateCache Snippet Data:
+\$1(templatePath):		${1:template/.html}
+*/}
+]]></content>
+	<tabTrigger>templateCache</tabTrigger>
+	<scope>source.js</scope>
+	<description>JS: Store Template in AngularJS Cache</description>
+</snippet>

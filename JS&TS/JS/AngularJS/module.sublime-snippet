@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+angular.module("$1", [ ${2/\s*((?:\w|[-])+)\s*(,?)\s*/"$1"$2 /g}])${3:;}
+${99:
+/* Module Snippet Data:
+\$1(Module Name):	${1:dme}
+\$2(Dependencies):	${2:dmeModule1, dmeModule2}
+*/
+}
+]]></content>
+	<tabTrigger>angular</tabTrigger>
+	<scope>source.js</scope>
+	<description>JS: AngularJS module</description>
+</snippet>

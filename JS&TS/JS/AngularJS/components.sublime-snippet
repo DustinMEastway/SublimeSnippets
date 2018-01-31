@@ -1,0 +1,12 @@
+
+<snippet>
+	<content><![CDATA[
+angular.module("${1/(^[A-Z])|([A-Z])|(.)/(?1\L\1\E\u)(?2-\L\2\E\u)(?3\3\u)/g}", [$2]).component("${1:myComp}", [${3/^(.)|(,\s*)|(\w)$/(?1"\1)(?2", ")(?3\3", )/g}function($3){
+	return {${4/(^$)|(^.*)/(?2\n\t\tbindings\: {\n\t\t\t )/g}${4: }${4/(^$)|(^.*)/(?2\n\t\t})/g}
+	};
+}]);
+]]></content>
+	<tabTrigger>Component</tabTrigger>
+	<scope>source.js</scope>
+	<description>JS Snip: AngularJS component</description>
+</snippet>

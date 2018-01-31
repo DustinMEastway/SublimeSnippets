@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+import ${3:{ $2 \}} from '$1';
+]]></content>
+	<tabTrigger>import</tabTrigger>
+	<scope>source.ts</scope>
+	<description>TS: Importing TS modules</description>
+</snippet>

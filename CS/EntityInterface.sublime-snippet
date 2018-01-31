@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+using CustomerService.Data.Common.Interfaces;
+using ORS.DomainObjects;
+
+namespace ORS.Data.Repositories.Interfaces
+{
+	// Created by ${1:EastwayD} on ${2:08/18/2016}
+	// Template version: 1.0
+
+	/// <summary>
+	/// An Interface that describes operations that are supported by a ${3:${TM_FILENAME/^(I)(.*)(Repository.cs)/(?2\2)/g}} Repository.
+	/// </summary>
+	public interface I$3Repository : IStandardRepository<$3DTO>
+	{
+	}
+}
+]]>	</content>
+	<tabTrigger>EntityInterface</tabTrigger>
+	<scope>source.cs</scope>
+</snippet>

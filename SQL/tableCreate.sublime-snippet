@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+CREATE TABLE [dbo].[${1:TableName}]
+(
+	[$1_Id] INT NOT NULL PRIMARY KEY,
+	$0
+)
+]]></content>
+	<tabTrigger>tableCreate</tabTrigger>
+	<scope>source.sql</scope>
+</snippet>

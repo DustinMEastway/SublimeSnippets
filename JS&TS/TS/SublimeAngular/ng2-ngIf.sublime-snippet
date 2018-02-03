@@ -1,9 +1,0 @@
-<snippet>
-
-    <tabTrigger>ng2-ngIf</tabTrigger>
-    <content><![CDATA[
-      *ngIf="${1:expression}"
-    ]]></content>
-    <scope>source.ts, source.html, source.js</scope>
-    <description>Angular 2 *ngIf snippet</description>
-  </snippet>

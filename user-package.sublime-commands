@@ -1,3 +1,4 @@
 [
-	{ "caption": "UserPackage: Hello World", "command": "hello_world" }
+	{ "caption": "UserPackage: Hello World", "command": "hello_world" },
+	{ "caption": "UserPackage: Barrel", "command": "barrel" }
 ]
